@@ -15,10 +15,8 @@ final class FilterListViewController: UIViewController {
         
         let filterNames: [String] = CIFilter.filterNames(inCategory: kCICategoryBuiltIn)
         
-        var typeList = Set<String>()
-        
         filterNames.forEach { filterName in
-            print("フィルタ名: \(filterName)")
+            print("\n# \(filterName)")
             guard let filter = CIFilter(name: filterName) else { return }
             
             let attributeKeys = filter.attributes.keys
@@ -28,43 +26,54 @@ final class FilterListViewController: UIViewController {
                 if let attributeValue = attributeValue as? String {
                     switch attributeKey {
                     case "CIAttributeFilterDisplayName":
-                        print("表示名: \(attributeKey) = \(attributeValue)")
+                        print("\n## 表示名\n\(attributeValue)")
                     case "CIAttributeFilterAvailable_iOS":
-                        print("利用可能なiOSバージョン: \(attributeKey) = \(attributeValue)")
+                        print("\n## 利用可能なiOSバージョン\n\(attributeValue)")
                     case "CIAttributeFilterName":
-                        print("フィルタ名: \(attributeKey) = \(attributeValue)")
+                        print("\n## フィルタ名\n\(attributeValue)")
                     case "CIAttributeFilterAvailable_Mac":
-                        print("利用可能なMacOSバージョン: \(attributeKey) = \(attributeValue)")
+                        print("\n## 利用可能なMacOSバージョン\n\(attributeValue)")
                     default: assertionFailure()
                     }
-                
+                    
                     return
                 }
                 if let attributeValue = attributeValue as? NSDictionary {
-                    print("パラメータ: \(attributeKey) = \(attributeValue)")
+                    print("\n## \(attributeKey)パラメータ")
                     let parameterKeys = attributeValue.allKeys as? [String]
-                    parameterKeys?.forEach { parameterKey in
-                        if parameterKey == "CIAttributeType" {
-                            // print("おお: "\(attributeValue[parameterKey])")
-                            typeList.insert(attributeValue[parameterKey] as! String)
+                    parameterKeys?.forEach {
+                        switch $0 {
+                        case "CIAttributeDisplayName": print("- 表示名: \(attributeValue[$0]!)")
+                        case "CIAttributeDescription": print("- 説明: \(attributeValue[$0]!)")
+                        case "CIAttributeDefault": print("- 初期値: \(attributeValue[$0]!)")
+                        case "CIAttributeClass": print("- クラス: \(attributeValue[$0]!)")
+                        case "CIAttributeType": print("- タイプ: \(attributeValue[$0]!)")
+                        case "CIAttributeSliderMax": print("- スライダー最大値: \(attributeValue[$0]!)")
+                        case "CIAttributeIdentity": print("- アイデンティティ: \(attributeValue[$0]!)")
+                        case "CIAttributeSliderMin": print("- スライダー最小値: \(attributeValue[$0]!)")
+                        case "CIAttributeMin": print("- 最小値: \(attributeValue[$0]!)")
+                        case "CIAttributeMax": print("- 最大値: \(attributeValue[$0]!)")
+                        case "CIUIParameterSet": print("- パラメーターセット: \(attributeValue[$0]!)")
+                        default: assertionFailure()
                         }
                     }
                     return
                 }
                 
                 if let attributeValue = attributeValue as? NSArray {
-                    print("カテゴリ: \(attributeKey) = \(attributeValue)")
+                    print("\n## カテゴリ")
+                    attributeValue.forEach { print(" - \($0)") }
                     return
                 }
                 
                 if let attributeValue = attributeValue as? URL {
-                    print("ドキュメントURL: \(attributeKey) = \(attributeValue)")
+                    print("\n## ドキュメントURL\n\(attributeKey) = \(attributeValue)")
                     return
                 }
                 
                 assertionFailure()
             }
         }
-        print(typeList)
     }
 }
+
