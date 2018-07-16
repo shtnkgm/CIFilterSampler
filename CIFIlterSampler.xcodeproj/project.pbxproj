@@ -12,6 +12,8 @@
 		DAEBCD1920FCDD6A00C716CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAEBCD1720FCDD6A00C716CB /* LaunchScreen.storyboard */; };
 		DAEBCD2420FCDF5800C716CB /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEBCD2220FCDF5200C716CB /* PureLayout.framework */; };
 		DAEBCD2820FCDFC000C716CB /* FilterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBCD2720FCDFC000C716CB /* FilterListViewController.swift */; };
+		DAEBCD2E20FCFC1500C716CB /* FilterAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBCD2D20FCFC1500C716CB /* FilterAttribute.swift */; };
+		DAEBCD3020FCFCF100C716CB /* ParameterAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBCD2F20FCFCF100C716CB /* ParameterAttribute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		DAEBCD1A20FCDD6A00C716CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAEBCD2220FCDF5200C716CB /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
 		DAEBCD2720FCDFC000C716CB /* FilterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListViewController.swift; sourceTree = "<group>"; };
+		DAEBCD2D20FCFC1500C716CB /* FilterAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAttribute.swift; sourceTree = "<group>"; };
+		DAEBCD2F20FCFCF100C716CB /* ParameterAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterAttribute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				DAEBCD0E20FCDD6800C716CB /* AppDelegate.swift */,
 				DAEBCD2720FCDFC000C716CB /* FilterListViewController.swift */,
+				DAEBCD2D20FCFC1500C716CB /* FilterAttribute.swift */,
+				DAEBCD2F20FCFCF100C716CB /* ParameterAttribute.swift */,
 				DAEBCD1520FCDD6A00C716CB /* Assets.xcassets */,
 				DAEBCD1720FCDD6A00C716CB /* LaunchScreen.storyboard */,
 				DAEBCD1A20FCDD6A00C716CB /* Info.plist */,
@@ -166,8 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAEBCD3020FCFCF100C716CB /* ParameterAttribute.swift in Sources */,
 				DAEBCD2820FCDFC000C716CB /* FilterListViewController.swift in Sources */,
 				DAEBCD0F20FCDD6800C716CB /* AppDelegate.swift in Sources */,
+				DAEBCD2E20FCFC1500C716CB /* FilterAttribute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
