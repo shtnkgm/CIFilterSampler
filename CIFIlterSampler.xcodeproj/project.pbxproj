@@ -8,22 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		DAEBCD0F20FCDD6800C716CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBCD0E20FCDD6800C716CB /* AppDelegate.swift */; };
-		DAEBCD1120FCDD6800C716CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBCD1020FCDD6800C716CB /* ViewController.swift */; };
-		DAEBCD1420FCDD6800C716CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAEBCD1220FCDD6800C716CB /* Main.storyboard */; };
 		DAEBCD1620FCDD6A00C716CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEBCD1520FCDD6A00C716CB /* Assets.xcassets */; };
 		DAEBCD1920FCDD6A00C716CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAEBCD1720FCDD6A00C716CB /* LaunchScreen.storyboard */; };
 		DAEBCD2420FCDF5800C716CB /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEBCD2220FCDF5200C716CB /* PureLayout.framework */; };
+		DAEBCD2820FCDFC000C716CB /* FilterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBCD2720FCDFC000C716CB /* FilterListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DAEBCD0B20FCDD6800C716CB /* CIFIlterSampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIFIlterSampler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEBCD0E20FCDD6800C716CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAEBCD1020FCDD6800C716CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DAEBCD1320FCDD6800C716CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAEBCD1520FCDD6A00C716CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAEBCD1820FCDD6A00C716CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAEBCD1A20FCDD6A00C716CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAEBCD2220FCDF5200C716CB /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
+		DAEBCD2720FCDFC000C716CB /* FilterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				DAEBCD0E20FCDD6800C716CB /* AppDelegate.swift */,
-				DAEBCD1020FCDD6800C716CB /* ViewController.swift */,
-				DAEBCD1220FCDD6800C716CB /* Main.storyboard */,
+				DAEBCD2720FCDFC000C716CB /* FilterListViewController.swift */,
 				DAEBCD1520FCDD6A00C716CB /* Assets.xcassets */,
 				DAEBCD1720FCDD6A00C716CB /* LaunchScreen.storyboard */,
 				DAEBCD1A20FCDD6A00C716CB /* Info.plist */,
@@ -137,7 +134,6 @@
 			files = (
 				DAEBCD1920FCDD6A00C716CB /* LaunchScreen.storyboard in Resources */,
 				DAEBCD1620FCDD6A00C716CB /* Assets.xcassets in Resources */,
-				DAEBCD1420FCDD6800C716CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +148,6 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"",
 				"$(SRCROOT)/Carthage/Build/iOS/PureLayout.framework",
 			);
 			name = Carthage;
@@ -171,7 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAEBCD1120FCDD6800C716CB /* ViewController.swift in Sources */,
+				DAEBCD2820FCDFC000C716CB /* FilterListViewController.swift in Sources */,
 				DAEBCD0F20FCDD6800C716CB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,14 +174,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DAEBCD1220FCDD6800C716CB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAEBCD1320FCDD6800C716CB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DAEBCD1720FCDD6A00C716CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
